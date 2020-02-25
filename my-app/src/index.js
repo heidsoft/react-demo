@@ -12,15 +12,24 @@ import * as serviceWorker from './serviceWorker';
 
 // const element = <h1>Hello, world</h1>;
 
+
 function Welcome(props) {
-  console.log(props)
   return <h1>Hello, {props.name}</h1>;
 }
 
+function Jake() {
+  return (
+    <div>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
+    </div>
+  );
+}
 
 
 function tick() {
-  const element = <Welcome name="Sara" />;
+  const element = <Jake />;
 
   ReactDOM.render(element, document.getElementById('root'));
 }
@@ -29,7 +38,3 @@ setInterval(tick, 1000);
 
 // ReactDOM.render(element, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
